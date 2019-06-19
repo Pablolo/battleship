@@ -1,0 +1,1 @@
+let disparo = prompt ("Ready, aim, fire! (enter a number from 0 to 6");
