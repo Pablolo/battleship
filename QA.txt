@@ -1,0 +1,5 @@
+
+-If you put the same number all the time, you can cheat
+-If you press cancel, nothing happens
+-If you put a letter instead of a number, it says you missed
+-It repeats the "number of hits" all the time, even when you missed. Should be only once
