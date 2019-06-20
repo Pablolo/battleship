@@ -9,7 +9,7 @@ let isSunk = false;
 while (isSunk == false) {
 	let disparo = prompt ("Ready, aim, fire! (enter a number from 0 to 6");
 	if ( disparo < 0 || disparo > 6 ) {
-		alert ("Añade un número entre 0 y 6 para disparar!");
+		alert ("Add a number between 0 and 6 to shoot!");
 	} else {
 		guesses = guesses + 1;
 		if (disparo == location1 ||
@@ -17,10 +17,19 @@ while (isSunk == false) {
 			disparo == location3 ) {
 			hits = hits +1;
 			console.log(hits);
+			alert ("Fuck, you hit it!");
+		} else {
+			alert ("You missed! Hahaha. Go again.");
+		} if (hits == 1) {
+			alert ("Okay, 1 hit, there's 2 more to find...");
+		} if (hits == 2) {
+			alert ("Okay, 2 hits! There's 1 more to find!");
 		} if (hits == 3) {
 			isSunk = true;
-			alert ("You sank my battleship, son of a bitch!");
+			alert ("You finally sank my battleship, son of a bitch!");
 		}
 	}
 }
-alert (`You guessed ${guesses} times before winning`);
+
+const stats = `You guessed ${guesses} times before winning, which means your accuracy was ` + ((3/guesses)*100) + `%`;
+alert (stats);
