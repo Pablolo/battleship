@@ -1,6 +1,10 @@
-location1 = 3;
-location2 = 4;
-location3 = 5;
+location1 = Math.floor(Math.random() * 5);
+location2 = location1 + 1;
+location3 = location1 + 2;
+
+console.log(location1);
+console.log(location2);
+console.log(location3);
 
 let hits = 0;
 let guesses = 0;
@@ -12,11 +16,12 @@ while (isSunk == false) {
 		alert ("Add a number between 0 and 6 to shoot!");
 	} else {
 		guesses = guesses + 1;
+		console.log("Actual guess number: " + guesses);
 		if (disparo == location1 ||
 			disparo == location2 ||
 			disparo == location3 ) {
 			hits = hits +1;
-			console.log(hits);
+			console.log("Actual hit number: " + hits);
 			alert ("Fuck, you hit it!");
 		} else {
 			alert ("You missed! Hahaha. Go again.");
@@ -30,6 +35,7 @@ while (isSunk == false) {
 		}
 	}
 }
+//alert (`You guessed ${guesses} times before winning`);
 
 const stats = `You guessed ${guesses} times before winning, which means your accuracy was ` + ((3/guesses)*100) + `%`;
 alert (stats);
