@@ -1,4 +1,4 @@
-location1 = Math.floor(Math.random() * 5);
+location1 = Math.floor(Math.random() * 5); //el barco debe empezar entre 0 y 4, sino se saldría del tablero
 location2 = location1 + 1;
 location3 = location1 + 2;
 
@@ -35,7 +35,6 @@ while (isSunk == false) {
 		}
 	}
 }
-//alert (`You guessed ${guesses} times before winning`);
 
 const stats = `You guessed ${guesses} times before winning, which means your accuracy was ` + ((3/guesses)*100) + `%`;
 alert (stats);
